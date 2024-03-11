@@ -1,0 +1,12 @@
+{
+  "editor.fontFamily": "'JetBrains Mono'",
+  "editor.inlayHints.fontFamily": "",
+  "terminal.integrated.fontFamily": "JetBrains Mono",
+  "editor.fontVariations": false,
+  "notebook.output.fontFamily": "",
+  "chat.editor.fontFamily": "default",
+  "gitlens.blame.fontFamily": "",
+  "markdown.preview.fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
+  "editor.lineHeight": 2,
+  "editor.codeLensFontFamily": "'JetBrains Mono'"
+}
