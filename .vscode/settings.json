@@ -8,5 +8,7 @@
   "gitlens.blame.fontFamily": "",
   "markdown.preview.fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif",
   "editor.lineHeight": 2,
-  "editor.codeLensFontFamily": "'JetBrains Mono'"
+  "editor.codeLensFontFamily": "'JetBrains Mono'",
+  "WillLuke.nextjs.addTypesOnSave": true,
+  "WillLuke.nextjs.hasPrompted": true
 }

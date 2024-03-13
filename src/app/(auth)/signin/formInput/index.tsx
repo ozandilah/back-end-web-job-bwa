@@ -14,15 +14,30 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-
+import { signIn } from "next-auth/react";
+import { useToast } from "@/components/ui/use-toast";
+import { useRouter } from "next/navigation";
 type Props = {};
 
 const FormInputSign = (props: Props) => {
   const form = useForm<z.infer<typeof signFormSchema>>({
     resolver: zodResolver(signFormSchema),
   });
-  const onSubmit = (val: z.infer<typeof signFormSchema>) => {
-    console.log(val);
+  const { toast } = useToast();
+  const router = useRouter();
+  const onSubmit = async (val: z.infer<typeof signFormSchema>) => {
+    const authenticated = await signIn("credentials", {
+      ...val,
+      redirect: false,
+    });
+    if (authenticated?.error) {
+      toast({
+        title: "Error",
+        description: "Email or Password maybe wrong!",
+      });
+      return;
+    }
+    await router.push("/");
   };
   return (
     <Form {...form}>
